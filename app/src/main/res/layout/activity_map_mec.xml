@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#e6e6e6"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.e_fundi.Services.MapMecActivity">
+
+
+        <RelativeLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+                <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:map="http://schemas.android.com/apk/res-auto"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:id="@+id/map"
+                    tools:context="com.example.android.strongtowerapp.BottomNavActivity.MapsActivity"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_marginTop="12dp"
+                android:id="@+id/linearSearch1"
+                android:visibility="gone"
+                android:layout_centerHorizontal="true"
+                android:background="#83000000"
+                android:layout_height="wrap_content">
+            <EditText
+                android:layout_width="170dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="44dp"
+                android:textColor="#FFF"
+                android:padding="3dp"
+                android:id="@+id/edtSearch"
+                android:hint="   search for a place"
+                android:textColorHint="#d1e4e0c4"
+                android:background="#cf493b31"
+                android:inputType="text" />
+            <Button
+                android:layout_width="40dp"
+                android:onClick="onSearch"
+                android:id="@+id/search"
+                android:drawableBottom="@drawable/ic_search_black_24dp"
+                android:textColor="#e9c4c198"
+                android:padding="6dp"
+                android:background="#cf493931"
+                android:layout_height="38dp"
+                android:layout_marginStart="1dp"
+                />
+            <Button
+                android:layout_width="40dp"
+                android:onClick="nearbyPlaces"
+                android:id="@+id/nearbyPlaces"
+                android:drawableBottom="@drawable/ic_public_black_24dp"
+                android:textColor="#e9c4c198"
+                android:padding="6dp"
+                android:background="#cf493a31"
+                android:layout_height="35dp"
+                android:layout_toRightOf="@+id/search"
+                android:layout_marginStart="2dp"
+                />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:text="search places"
+                android:textColor="#FFF"
+                android:background="#ff8c3b"
+                android:padding="4dp"
+                android:visibility="visible"
+                android:id="@+id/txtsearchPlaces"
+                android:layout_width="wrap_content"
+                android:layout_toStartOf="@+id/linearfb"
+                android:elevation="4dp"
+                android:layout_marginEnd="6dp"
+                android:fontFamily="sans-serif-light"
+                android:layout_marginBottom="32dp"
+                android:layout_above="@+id/txtnearbyPlaces"
+                android:layout_height="wrap_content"
+                tools:targetApi="lollipop" />
+            <TextView
+                android:text="nearby places"
+                android:textColor="#FFF"
+                android:background="#eeff7417"
+                android:padding="4dp"
+                android:elevation="4dp"
+                android:id="@+id/txtnearbyPlaces"
+                android:layout_width="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:layout_toStartOf="@+id/linearfb"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="145dp"
+                android:layout_marginEnd="6dp"
+                android:visibility="visible"
+                android:layout_height="wrap_content"
+                tools:targetApi="lollipop" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/linearfb"
+                android:orientation="vertical"
+                android:layout_marginBottom="35dp"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginEnd="6dp"
+                    android:layout_marginBottom="16dp"
+                    app:srcCompat="@drawable/ic_search_black_24dp"
+                    android:elevation="4dp"
+                    android:onClick="ToSearch"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:id="@+id/fb_help"
+                    android:visibility="visible"
+                    android:backgroundTint="#ff8c3b"
+                    android:layout_height="wrap_content"
+                    tools:targetApi="lollipop"
+                    tools:ignore="VectorDrawableCompat" />
+
+                <android.support.design.widget.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginEnd="6dp"
+                    android:layout_marginBottom="16dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:srcCompat="@drawable/ic_location_on_black_24dp"
+                    android:elevation="4dp"
+                    android:id="@+id/fb_favorite"
+                    android:onClick="ToNearby"
+                    android:visibility="visible"
+                    android:backgroundTint="#eeff7417"
+                    android:layout_height="wrap_content"
+                    tools:targetApi="lollipop"
+                    tools:ignore="VectorDrawableCompat" />
+
+
+                <android.support.design.widget.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginEnd="6dp"
+                    android:layout_marginBottom="20dp"
+                    app:srcCompat="@drawable/ic_add_location_black_24dp"
+                    android:elevation="6dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:id="@+id/fb_plus"
+                    app:pressedTranslationZ="12dp"
+                    android:background="#e22d2801"
+                    android:layout_height="wrap_content"
+                    tools:targetApi="lollipop"
+                    tools:ignore="VectorDrawableCompat" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#c8000000"
+        android:layout_alignParentBottom="true"
+        android:scrollbarAlwaysDrawHorizontalTrack="false"
+        android:layout_gravity="bottom"
+        app:itemIconTint="@drawable/selector"
+        app:elevation="3dp"
+        app:itemTextColor="@drawable/selector"
+        app:menu="@menu/navigation1" />
+
+    <RelativeLayout
+        android:id="@+id/design_Bottom_sheet1"
+        android:layout_width="match_parent"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="0dp"
+        app:elevation="4dp"
+        app:layout_behavior="@string/bottom_sheet_behavior"
+        android:background="#c7c7c7"
+        android:layout_height="230dp"
+        tools:ignore="MissingPrefix">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:id="@+id/cardItem"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:focusable="true"
+            app:cardCornerRadius="6dp"
+            android:clickable="true"
+            android:elevation="4dp"
+            android:layout_height="match_parent"
+            tools:targetApi="lollipop">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:text="What is your request?"
+                    android:textStyle="normal"
+                    android:layout_margin="4dp"
+                    android:textSize="21sp"
+                    android:id="@+id/titleBSheet"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+                <TextView
+                    android:text= "Locate nearby Garages?"
+                    android:textStyle="normal"
+                    android:padding="10dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/txtGarage"
+                    android:background="@drawable/cerclebackgroundpink"
+                    android:layout_below="@+id/titleBSheet"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text= "A mechanic at my location?"
+                    android:textStyle="normal"
+                    android:padding="10dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/txtMechanic"
+                    android:background="@drawable/cerclebackgroundpink"
+                    android:layout_below="@+id/txtGarage"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

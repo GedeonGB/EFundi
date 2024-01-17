@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ff7a14</color>
+    <color name="colorPrimaryDark">#ff8945</color>
+    <color name="colorAccent">#ea6600</color>
+    <color name="colorPrimary2">#001b1b01</color>
+    <color name="colorText">#b75000</color>
+    <color name="colorText2">#fff</color>
+
+    <color name="SignUp">#ff9543</color>
+    <color name="SignUpActive">#b75000</color>
+
+    <color name="black_overlay">#66dcdcdc</color>
+</resources>

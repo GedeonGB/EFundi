@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">E-Fundi</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="onclick_for_help">Onclick for Help</string>
+    <string name="feedback">Feedback</string>
+    <string name="home">Home</string>
+    <string name="nearby">Nearby</string>
+    <string name="txtdesc">So far we’ve only covered strategies for thinking carefully about individual columns in your data set. This is clearly worth doing: often just seeing a familiar shape in your data tells you a lot about your data.</string>
+    <string name="fuel">Fuel</string>
+    <string name="garage">Garage</string>
+    <string name="shopping">Shopping</string>
+    <string name="tow_truck">Tow Truck</string>
+    <string name="title_activity_map_mec">Map</string>
+    <string name="txtFeedb">Because we care about our customers, we want to hear from them. the feedback can be regarding our service, or how you have been served... and we commit to keep secret of any information that will be given below. Thank you</string>
+    <string name="title_activity_sign_out_">Sign out</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+</resources>

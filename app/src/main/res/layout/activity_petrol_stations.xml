@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#e6e6e6"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.e_fundi.Services.SpareShop">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:fitsSystemWindows="true"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:fitsSystemWindows="true"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/selection1"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/image14"
+                    tools:ignore="VectorDrawableCompat" />
+                <TextView
+                    android:id="@+id/message"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center"
+                    android:textColor="@color/colorText2"
+                    android:background="#b9000000"
+                    android:textSize="20sp"
+                    android:text="E-fundi Petrol pumps Services" />
+
+                <Button
+                    android:background="@drawable/ic_person_add_black_24dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="6dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:layout_width="30dp"
+                    android:layout_height="32dp"
+                    android:focusable="true" />
+            </RelativeLayout>
+
+
+            <ScrollView
+                android:layout_marginTop="-92dp"
+                android:scrollbarThumbVertical="@color/colorPrimary"
+                android:scrollbarFadeDuration="1500"
+                android:layout_below="@+id/selection1"
+                android:scrollbarSize="2dp"
+                android:scrollbarStyle="outsideOverlay"
+                android:fadeScrollbars="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <View
+                        android:background="#e826240f"
+                        android:layout_marginTop="2dp"
+                        android:layout_width="match_parent"
+                        android:id="@+id/view1"
+                        android:layout_below="@id/linearCard2"
+                        android:layout_height="0.5dp" />
+
+
+
+
+
+                    <RelativeLayout
+                        android:id="@+id/linCard2"
+                        android:layout_below="@id/view1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="#d9d9d9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:text="Petrol pumps available"
+                            android:textColor="@color/colorText"
+                            android:textSize="18sp"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="sans-serif-light"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="10dp"
+                            android:id="@+id/txtTrending"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recyclerPetrolS"
+                            android:layout_marginTop="14dp"
+                            android:scrollbarStyle="insideInset"
+                            android:scrollbars="vertical"
+                            android:scrollbarThumbHorizontal="@color/colorPrimaryDark"
+                            android:scrollbarFadeDuration="7500"
+                            android:scrollbarSize="3dp"
+                            android:layout_below="@+id/txtTrending"
+                            android:scrollIndicators="right"
+                            android:layout_width="wrap_content"
+                            android:layout_marginBottom="58dp"
+                            android:layout_height="wrap_content"
+                            tools:targetApi="m" />
+
+
+                    </RelativeLayout>
+
+
+
+                    <View
+                        android:background="#e826240f"
+                        android:id="@+id/view2"
+                        android:layout_width="match_parent"
+                        android:layout_below="@id/linCard2"
+                        android:layout_height="0.5dp" />
+
+
+
+                </RelativeLayout>
+            </ScrollView>
+
+
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#c8000000"
+        android:layout_alignParentBottom="true"
+        android:scrollbarAlwaysDrawHorizontalTrack="false"
+        android:layout_gravity="bottom"
+        app:itemIconTint="@drawable/selector"
+        app:elevation="3dp"
+        app:itemTextColor="@drawable/selector"
+        app:menu="@menu/navigation1" />
+
+</android.support.design.widget.CoordinatorLayout>

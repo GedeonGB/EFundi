@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/feedback"
+        android:iconTint="#FFFFFF"
+        android:icon="@drawable/ic_feedback_black_24dp"
+        android:title="@string/feedback"
+        tools:targetApi="o" />
+    <item
+        android:id="@+id/petrolS"
+        android:iconTint="#FFFFFF"
+        android:icon="@drawable/ic_local_gas_station_black_24dp"
+        android:title="@string/fuel"
+        tools:targetApi="o" />
+
+    <item
+        android:id="@+id/garage"
+        android:iconTint="#FFFFFF"
+        android:icon="@drawable/ic_build_black_24dp"
+        android:title="@string/garage"
+        tools:targetApi="o" />
+
+    <item
+        android:id="@+id/spareS"
+        android:iconTint="#FFFFFF"
+        android:icon="@drawable/ic_shopping_cart_black_24dp"
+        android:title="@string/shopping"
+        tools:targetApi="o" />
+
+    <item
+        android:id="@+id/towtruck"
+        android:iconTint="#FFFFFF"
+        android:iconTintMode="multiply"
+        android:icon="@drawable/ic_local_shipping_black_24dp"
+        android:title="@string/tow_truck"
+        tools:targetApi="o" />
+
+
+</menu>
